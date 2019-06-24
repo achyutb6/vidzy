@@ -1,0 +1,25 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.thumbnail{        
+    width: 300px; 
+
+    height: 350px;
+    overflow: auto;
+}
+
+.caption{        
+    margin: auto;
+  	width: 60%;
+}
+
+.thumbnail img{
+    height: 100px;
+    display: block;
+}

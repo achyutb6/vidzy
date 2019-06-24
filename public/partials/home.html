@@ -1,0 +1,32 @@
+<h1>Home Page</h1>
+<p>
+    <a href="/#/add-video">Add a Video</a>
+</p>
+<ul>
+    <div class="row" ng-repeat="video in videos track by $index" ng-if="$index%3==0">
+	  <div class="col-md-4">
+	  	<div class="thumbnail">
+	  	<img class="card-img-top" ng-src='../images/{{videos[$index]._id}}.jpg'><div class="caption"> <a class="card-title" href="/#/video/{{videos[$index]._id}}">
+            {{videos[$index].title}}
+        </a>
+        <a href="/#/video/delete/{{videos[$index]._id}}">
+            <i class="glyphicon glyphicon-remove"></i>
+        </a></div></div></div>
+	  <div ng-if="videos[$index+1]._id" class="col-md-4">
+	  	<div class="thumbnail">
+	  	<img class="card-img-top" ng-src='../images/{{videos[$index+1]._id}}.jpg'><div class="caption"> <a class="card-title" href="/#/video/{{videos[$index+1]._id}}">
+            {{videos[$index+1].title}}
+        </a>
+        <a href="/#/video/delete/{{videos[$index+1]._id}}">
+            <i class="glyphicon glyphicon-remove"></i>
+        </a></div></div></div>
+	  <div ng-if="videos[$index+2]._id" class="col-md-4">
+	  	<div class="thumbnail">
+	  	<img class="card-img-top" ng-src='../images/{{videos[$index+2]._id}}.jpg'><div class="caption"> <a class="card-title" href="/#/video/{{videos[$index+2]._id}}">
+            {{videos[$index+2].title}}
+        </a>
+        <a href="/#/video/delete/{{videos[$index+2]._id}}">
+            <i class="glyphicon glyphicon-remove"></i>
+        </a></div></div></div>
+	</div>
+</ul>
